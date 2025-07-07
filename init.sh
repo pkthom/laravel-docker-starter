@@ -24,6 +24,10 @@ docker compose run --rm app php artisan key:generate
 # Start and build containers
 docker compose up -d --build
 
+# Wait for MySQL to be ready
+echo "Waiting for MySQL to be ready..."
+sleep 10
+
 # Fix permissions
 docker compose exec app chmod -R 777 storage bootstrap/cache
 
