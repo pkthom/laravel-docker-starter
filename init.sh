@@ -26,9 +26,7 @@ docker compose up -d --build
 
 # Wait for MySQL to be ready
 echo "Waiting for MySQL to be ready..."
-until docker compose exec db mysql -ularavel -psecret -e "SELECT 1;" >/dev/null 2>&1; do
-  sleep 1
-done
+sleep 30
 
 # Fix permissions
 docker compose exec app chmod -R 777 storage bootstrap/cache
