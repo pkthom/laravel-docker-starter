@@ -31,7 +31,7 @@ This will:
 - db: MySQL 8.0
 
 ## Access
-- Laravel: http://localhost:8000
+- Laravel: http://localhost
 - MySQL: localhost:3306
 
 ## Cleanup
